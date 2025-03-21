@@ -1,0 +1,8 @@
+{"time":"2025-03-21T16:02:12.159588737+08:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-03-21T16:02:12.159604869+08:00","level":"INFO","msg":"created symlink","path":"/home/jhy/jianghaoyun/sps/HASS_Qwen/wandb/run-20250321_160212-ewxav8tz/logs/debug-core.log"}
+{"time":"2025-03-21T16:02:12.267779784+08:00","level":"INFO","msg":"created new stream","id":"ewxav8tz"}
+{"time":"2025-03-21T16:02:12.267819877+08:00","level":"INFO","msg":"stream: started","id":"ewxav8tz"}
+{"time":"2025-03-21T16:02:12.267893536+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ewxav8tz"}
+{"time":"2025-03-21T16:02:12.267898659+08:00","level":"INFO","msg":"handler: started","stream_id":"ewxav8tz"}
+{"time":"2025-03-21T16:02:12.268019908+08:00","level":"INFO","msg":"sender: started","stream_id":"ewxav8tz"}
+{"time":"2025-03-21T16:02:13.044334646+08:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,0 +1,83 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.10.16
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 55
+                - 71
+                - 105
+            "2":
+                - 1
+                - 11
+                - 49
+                - 55
+                - 71
+                - 105
+            "3":
+                - 16
+                - 23
+                - 55
+            "4": 3.10.16
+            "5": 0.18.7
+            "6": 4.38.1
+            "8":
+                - 5
+            "12": 0.18.7
+            "13": linux-x86_64
+act:
+    value: "No"
+b1:
+    value: 0.9
+b2:
+    value: 0.95
+bs:
+    value: 2
+config_path:
+    value: /home/jhy/jianghaoyun/sps/EAGLE/eagle/train/qwq_32B_config.json
+data_noise:
+    value: true
+datapath:
+    value: /home/jhy/jianghaoyun/sps/EAGLE/eagle/ge_data/output_ge_last_6w/1
+embeding:
+    value: true
+grad_clip:
+    value: 0.5
+gradient_accumulation_steps:
+    value: 1
+head_w:
+    value: 0.1
+is_warmup:
+    value: true
+lr:
+    value: 3e-05
+max_len:
+    value: 2048
+mean:
+    value: 0
+noise:
+    value: uniform
+num_epochs:
+    value: 40
+num_warmup_steps:
+    value: 13243
+num_workers:
+    value: 2
+p_w:
+    value: 0.1
+residual:
+    value: true,norm
+save_freq:
+    value: 5
+std:
+    value: 0.2
+topk_w:
+    value: 0
+total_steps:
+    value: 1324300
+v_w:
+    value: 1

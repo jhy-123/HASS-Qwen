@@ -1,0 +1,27 @@
+2025-03-21 15:08:42,997 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2025-03-21 15:08:42,997 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Configure stats pid to 1338602
+2025-03-21 15:08:42,997 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Loading settings from /root/.config/wandb/settings
+2025-03-21 15:08:42,997 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Loading settings from /home/jhy/jianghaoyun/sps/HASS_Qwen/wandb/settings
+2025-03-21 15:08:42,998 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-03-21 15:08:43,000 WARNING MainThread:1338602 [wandb_setup.py:_flush():79] Could not find program at -m train.main_hass
+2025-03-21 15:08:43,002 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m train.main_hass'}
+2025-03-21 15:08:43,002 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Applying login settings: {'api_key': '***REDACTED***'}
+2025-03-21 15:08:43,005 INFO    MainThread:1338602 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-03-21 15:08:43,005 INFO    MainThread:1338602 [wandb_init.py:_log_setup():533] Logging user logs to /home/jhy/jianghaoyun/sps/HASS_Qwen/wandb/run-20250321_150842-72sk1xz6/logs/debug.log
+2025-03-21 15:08:43,008 INFO    MainThread:1338602 [wandb_init.py:_log_setup():534] Logging internal logs to /home/jhy/jianghaoyun/sps/HASS_Qwen/wandb/run-20250321_150842-72sk1xz6/logs/debug-internal.log
+2025-03-21 15:08:43,011 INFO    MainThread:1338602 [wandb_init.py:init():619] calling init triggers
+2025-03-21 15:08:43,013 INFO    MainThread:1338602 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'lr': 3e-05, 'bs': 2, 'gradient_accumulation_steps': 1, 'datapath': '/home/jhy/jianghaoyun/sps/EAGLE/eagle/ge_data/output_ge_last_6w/1', 'is_warmup': True, 'num_epochs': 40, 'num_warmup_steps': 13243, 'total_steps': 1324300, 'p_w': 0.1, 'v_w': 1.0, 'topk_w': 0.0, 'head_w': 0.1, 'num_workers': 2, 'embeding': True, 'act': 'No', 'data_noise': True, 'noise': 'uniform', 'mean': 0.0, 'std': 0.2, 'residual': 'true,norm', 'max_len': 2048, 'config_path': '/home/jhy/jianghaoyun/sps/EAGLE/eagle/train/qwq_32B_config.json', 'b1': 0.9, 'b2': 0.95, 'grad_clip': 0.5, 'save_freq': 5}
+2025-03-21 15:08:43,017 INFO    MainThread:1338602 [wandb_init.py:init():669] starting backend
+2025-03-21 15:08:43,017 INFO    MainThread:1338602 [wandb_init.py:init():673] sending inform_init request
+2025-03-21 15:08:43,022 INFO    MainThread:1338602 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-21 15:08:43,024 INFO    MainThread:1338602 [wandb_init.py:init():686] backend started and connected
+2025-03-21 15:08:43,029 INFO    MainThread:1338602 [wandb_init.py:init():781] updated telemetry
+2025-03-21 15:08:43,046 INFO    MainThread:1338602 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2025-03-21 15:08:43,938 INFO    MainThread:1338602 [wandb_init.py:init():867] starting run threads in backend
+2025-03-21 15:08:44,031 INFO    MainThread:1338602 [wandb_run.py:_console_start():2456] atexit reg
+2025-03-21 15:08:44,032 INFO    MainThread:1338602 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2025-03-21 15:08:44,034 INFO    MainThread:1338602 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-03-21 15:08:44,035 INFO    MainThread:1338602 [wandb_run.py:_redirect():2395] Redirects installed.
+2025-03-21 15:08:44,037 INFO    MainThread:1338602 [wandb_init.py:init():911] run started, returning control to user process
+2025-03-21 15:09:17,524 WARNING MsgRouterThr:1338602 [router.py:message_loop():75] message_loop has been closed

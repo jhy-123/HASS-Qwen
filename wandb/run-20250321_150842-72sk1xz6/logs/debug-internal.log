@@ -1,0 +1,18 @@
+{"time":"2025-03-21T15:08:43.026672649+08:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-03-21T15:08:43.026687562+08:00","level":"INFO","msg":"created symlink","path":"/home/jhy/jianghaoyun/sps/HASS_Qwen/wandb/run-20250321_150842-72sk1xz6/logs/debug-core.log"}
+{"time":"2025-03-21T15:08:43.13231733+08:00","level":"INFO","msg":"created new stream","id":"72sk1xz6"}
+{"time":"2025-03-21T15:08:43.132353525+08:00","level":"INFO","msg":"stream: started","id":"72sk1xz6"}
+{"time":"2025-03-21T15:08:43.132378884+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"72sk1xz6"}
+{"time":"2025-03-21T15:08:43.132391622+08:00","level":"INFO","msg":"sender: started","stream_id":"72sk1xz6"}
+{"time":"2025-03-21T15:08:43.13241408+08:00","level":"INFO","msg":"handler: started","stream_id":"72sk1xz6"}
+{"time":"2025-03-21T15:08:43.947842884+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-21T15:09:17.524485757+08:00","level":"INFO","msg":"stream: closing","id":"72sk1xz6"}
+{"time":"2025-03-21T15:09:17.524524851+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-21T15:09:17.525275218+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-21T15:09:17.813359074+08:00","level":"WARN","msg":"No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job"}
+{"time":"2025-03-21T15:09:17.813381492+08:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2025-03-21T15:09:18.421681779+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-21T15:09:20.229924156+08:00","level":"INFO","msg":"handler: closed","stream_id":"72sk1xz6"}
+{"time":"2025-03-21T15:09:20.229965906+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"72sk1xz6"}
+{"time":"2025-03-21T15:09:20.229995992+08:00","level":"INFO","msg":"sender: closed","stream_id":"72sk1xz6"}
+{"time":"2025-03-21T15:09:20.232985543+08:00","level":"INFO","msg":"stream: closed","id":"72sk1xz6"}

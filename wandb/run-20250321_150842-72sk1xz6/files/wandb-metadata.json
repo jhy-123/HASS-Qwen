@@ -1,0 +1,65 @@
+{
+  "os": "Linux-5.10.134-008.12.kangaroo.al8.x86_64-x86_64-with-glibc2.35",
+  "python": "3.10.16",
+  "startedAt": "2025-03-21T07:08:43.027978Z",
+  "args": [
+    "--basepath",
+    "/data/jianghaoyun/models/QwQ-32B",
+    "--tmpdir",
+    "/home/jhy/jianghaoyun/sps/EAGLE/eagle/ge_data/output_ge_last_6w/1",
+    "--cpdir",
+    "/data/jianghaoyun/EAGLE/02_train_ckpt/last_4w_hass_test",
+    "--configpath",
+    "/home/jhy/jianghaoyun/sps/EAGLE/eagle/train/qwq_32B_config.json",
+    "--epoch",
+    "40",
+    "--bs",
+    "2",
+    "--topk",
+    "10",
+    "--topk_w",
+    "0",
+    "--forward_num_total",
+    "3"
+  ],
+  "program": "-m train.main_hass",
+  "git": {
+    "remote": "https://github.com/Coco58323/HASS_Qwen.git",
+    "commit": "314e78f0dd6ba1a97263ba77f0144b64f783e012"
+  },
+  "email": "jianghaoyun4@gmail.com",
+  "root": "/home/jhy/jianghaoyun/sps/HASS_Qwen",
+  "host": "dsw-191986-56df594ff9-pn6kf",
+  "username": "root",
+  "executable": "/root/miniconda3/envs/eagle/bin/python",
+  "cpu_count": 16,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "811615838208",
+      "used": "637505536"
+    }
+  },
+  "memory": {
+    "total": "274877906944"
+  },
+  "cpu": {
+    "count": 16,
+    "countLogical": 16
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85198045184",
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85198045184",
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.4"
+}
