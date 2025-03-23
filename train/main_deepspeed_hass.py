@@ -6,16 +6,16 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--basepath', type=str, default="/data/jianghaoyun/models/QwQ-32B")
 parser.add_argument('--configpath', type=str, default="/home/jhy/jianghaoyun/sps/EAGLE/eagle/train/qwq_32B_config.json")
 parser.add_argument('--lr', type=float, default=3e-5)
-parser.add_argument('--bs', type=int, default=2)
+parser.add_argument('--bs', type=int, default=8)
 parser.add_argument('--gradient-accumulation-steps', type=int, default=1)
-parser.add_argument('--tmpdir', type=str, default="/home/jhy/jianghaoyun/sps/EAGLE/eagle/ge_data/outdir_ge_last_10w/1")
-parser.add_argument('--cpdir', type=str, default="/data/jianghaoyun/EAGLE/02_train_ckpt/last_4w_hass_test")
-parser.add_argument('--epoch', type=int, default=40)
+parser.add_argument('--tmpdir', type=str, default="/home/jhy/jianghaoyun/sps/EAGLE/eagle/ge_data/15w_data/outdir_ge_last_10w")
+parser.add_argument('--cpdir', type=str, default="/data/jianghaoyun/EAGLE/02_train_ckpt/last_10w_hass")
+parser.add_argument('--epoch', type=int, default=80)
 parser.add_argument('--topk', type=int, default=10)
-parser.add_argument('--topk_w', type=float, default=1.0)
+parser.add_argument('--topk_w', type=float, default=0.0)
 parser.add_argument('--forward_num_total', type=int, default=3)
 parser.add_argument('--ckpt_path', type=str, default=None)
-parser.add_argument('--data_num', type=int, default=40000)
+parser.add_argument('--data_num', type=int, default=100000)
 parser.add_argument('--debug', action='store_true')
 parser.add_argument("--local_rank", type=int, default=-1, help="local_rank for distributed training on gpus")
 parser = deepspeed.add_config_arguments(parser)
@@ -68,7 +68,7 @@ set_seed(0)
 accelerator = Accelerator(mixed_precision="fp16")
 
 import sys 
-sys.path.append("/home/jhy/jianghaoyun/sps/HASS_Qwen")
+sys.path.append("/home/jhy/jianghaoyun/sps/HASS-Qwen_jhy")
 from model.cnets_qwen2 import Model
 from model.configs import EConfig
 
@@ -85,9 +85,9 @@ rank = torch.distributed.get_rank()
 if rank == 0:
     import wandb
 
-    # wandb.login(key="")
-    # wandb.init(project="HASS", entity="", config=train_config)
-    wandb.init(mode="disabled")
+    wandb.login(key="88fce897fce6f0e79e19832b795eaa5390e3f9b6")
+    wandb.init(project="HASS", entity="jhy-project", config=train_config)
+    # wandb.init(mode="disabled")
 
 try:
     with open(os.path.join(args.basepath, "model.safetensors.index.json"), "r") as f:
@@ -487,7 +487,7 @@ for epoch in range(num_epochs):
                 target_p = nn.Softmax(dim=2)(target_head)
                 target_p = target_p.detach()
                 loss_mask = data["loss_mask"][:, :, None].to(rank)
-                vloss, ploss, topk_loss, out_head = compute_loss(data["target"], target_p, predict, loss_mask)
+                vloss, ploss, topk_loss, out_head = compute_loss(data["target"].to(rank), target_p, predict, loss_mask)
                 loss = train_config["v_w"] * vloss + train_config["p_w"] * ploss + train_config["topk_w"] * topk_loss
                 _, predicted = torch.max(out_head, 2)
                 _, target = torch.max(target_head, 2)
